@@ -15,10 +15,20 @@ public class home1 {
 		
 		Hour = Min / 60;
 		Min = Min % 60;
+		Day = Hour/24;
+		Hour = Hour % 24;
+	}
+	public void Print()
+	{
+		
+		JOptionPane.showMessageDialog(null,"Time \n Day : Hour : Min : Sec\n "+ Day +"      : "+ Hour +"       : "+ Min +"      : "+ Sec," Message ",1);
 	}
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-
+		home1 ts1 = new home1();
+		ts1.getData();
+		ts1.Calc();
+		ts1.Print();
 	}
 
 }
