@@ -162,5 +162,60 @@ public void Calc()
 		}
 		
 	}
+public String Print()
+	{
+		String name="";
+		name = "Number\tResult\tGrade\n";
+		for(int i=0;i<Sum.length;i++)
+		{
+			for(int j=1;j==1;j++)
+			{
+				name = name +(i+1)+"\t"+ Sum[i][0]+"\t"+Sum[i][1];
+			}
+			name = name +"\n";
+		}
+		return name;
+	}
 	
+	
+
+	public static void main(String[] args) 
+	{
+		JTextArea Output = new JTextArea();
+		JTextArea All = new JTextArea();
+		home3 ts1 = new home3();
+		int chose;
+		do
+		{
+		
+		chose = Integer.parseInt(JOptionPane.showInputDialog(null,"Enter 1. Sec3\nEnter 2. Sec4\nEnter 3. Sec5\nEnter 4. Exit :  ","Message",JOptionPane.QUESTION_MESSAGE));
+		switch(chose)
+		{
+			case 1:
+				All.setText(ts1.OOPSec3());
+				ts1.Calc();
+				Output.setText(ts1.Print());
+				JOptionPane.showMessageDialog(null,All,"Message",JOptionPane.INFORMATION_MESSAGE);
+				JOptionPane.showMessageDialog(null,Output,"Message",JOptionPane.INFORMATION_MESSAGE);
+			break;
+			case 2:
+				All.setText(ts1.OOPSec4());
+				ts1.Calc();
+				Output.setText(ts1.Print());
+				JOptionPane.showMessageDialog(null,All,"Message",JOptionPane.INFORMATION_MESSAGE);
+				JOptionPane.showMessageDialog(null,Output,"Message",JOptionPane.INFORMATION_MESSAGE);
+			break;
+			case 3:
+				All.setText(ts1.OOPSec5());
+				ts1.Calc();
+				Output.setText(ts1.Print());
+				JOptionPane.showMessageDialog(null,All,"Message",JOptionPane.INFORMATION_MESSAGE);
+				JOptionPane.showMessageDialog(null,Output,"Message",JOptionPane.INFORMATION_MESSAGE);
+			break;
+			case 4:
+				System.exit(0);
+			break;
+		}
+		}while(chose != 4);
+	}	
 }
